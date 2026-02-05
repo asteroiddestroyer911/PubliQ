@@ -1,0 +1,14 @@
+flowchart LR
+
+Start[User Opens PubliQ] --> Upload[Upload Government Documents]
+Upload --> Process[Extract & Chunk Text]
+Process --> Embed[Generate Embeddings]
+Embed --> Store[Store in ChromaDB]
+
+Query[User Asks Question] --> Retrieve[Retrieve Relevant Chunks]
+Retrieve --> Context[Assemble Context]
+Context --> LLM[AWS Bedrock Model]
+LLM --> Cite[Attach Source Citations]
+Cite --> Answer[Return Answer to User]
+
+Store --> Retrieve
