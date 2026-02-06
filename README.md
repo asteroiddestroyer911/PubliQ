@@ -148,5 +148,5 @@ PubliQ/
 
 ### Step 1: Clone Repository
 ```bash
-git clone https://github.com/your-username/publiq.git
+git clone https://github.com/asteroiddestroyer911/PubliQ.git
 cd publiq
