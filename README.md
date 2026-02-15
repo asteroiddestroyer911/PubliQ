@@ -130,16 +130,8 @@ PubliQ follows a scalable Retrieval-Augmented Generation architecture:
 PubliQ/
 │
 ├── docs/
-│   ├── requirements.md
-│   └── design.md
-│
-├── diagrams/
-│   ├── architecture.mmd
-│   └── process_flow.mmd
-│
-├── src/
-│
-└── README.md
+    ├── requirements.md
+    └── design.md
 ```
 
 ---
