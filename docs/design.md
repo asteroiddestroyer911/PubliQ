@@ -52,7 +52,7 @@ flowchart TB
 
     %% Ingestion
     Ingest[Document Processing<br/>Extract + Chunk + Embed]
-    Storage[(AWS S3)]
+    Storage[(AWS S3 - Raw Documents)]
 
     %% Flow
     User --> UI
@@ -69,6 +69,10 @@ flowchart TB
     Bedrock --> Response
     Response --> API
     API --> UI
+
+    %% Optional Reference Retrieval
+    Storage -.-> API
+
 
 
 ```
