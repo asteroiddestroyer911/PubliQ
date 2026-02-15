@@ -1,103 +1,108 @@
-# 🌐 PubliQ – AI-Powered Public Information Assistant
+# 🌐 PubliQ – AI-Powered Civic Information Assistant
 
-🚀 PubliQ is an AI-driven civic information platform designed to democratize access to government schemes, policies, and public service documents across India using Retrieval-Augmented Generation (RAG) powered by AWS Bedrock.
+**AWS AI for Bharat Hackathon 2026 Submission**
+
+PubliQ is a Retrieval-Augmented Generation (RAG) based AI assistant designed to make government schemes and public service information accessible, understandable, and verifiable for citizens across India.
+
+---
+
+## 🚀 Vision
+
+To democratize access to government welfare schemes through conversational AI that is:
+
+- Transparent  
+- Multilingual  
+- Accurate  
+- Source-cited  
+- Rural-friendly  
 
 ---
 
 ## 📌 Problem Statement
 
-Millions of Indian citizens struggle to access and understand government scheme documents due to:
+Millions of Indian citizens struggle to access and understand government schemes due to:
 
-- Complex and lengthy documentation
-- Language barriers
-- Low digital literacy
-- Scattered information across multiple sources
-- Lack of conversational and accessible interfaces
+- Complex documentation and legal language  
+- Language barriers  
+- Low digital literacy  
+- Information scattered across multiple PDFs and portals  
+- Lack of conversational interfaces  
 
-This leads to citizens missing critical benefits, services, and opportunities.
+As a result, eligible citizens often miss critical benefits.
 
 ---
 
 ## 💡 Our Solution
 
-PubliQ converts government documents into an intelligent conversational knowledge system.
+PubliQ converts official government documents into an intelligent conversational knowledge system.
 
-Users can:
+Using Retrieval-Augmented Generation (RAG), PubliQ:
 
-- Upload scheme documents (PDF/DOCX/TXT)
-- Ask questions in natural language
-- Receive verified answers with source citations
-- Access multilingual AI assistance
-- Get real-time responses even on low-bandwidth networks
+1. Ingests government scheme documents  
+2. Converts them into semantic embeddings  
+3. Stores them in a vector database  
+4. Retrieves relevant context based on user queries  
+5. Generates grounded, citation-backed responses using AWS Bedrock  
 
-PubliQ uses Retrieval-Augmented Generation (RAG) to ensure responses are accurate, grounded, and trustworthy.
-
----
-
-## 🎯 Target Users
-
-- Rural Citizens
-- Community NGOs
-- Government Field Workers
-- Social Welfare Volunteers
-- Local Administrative Bodies
-
----
-
-## ⭐ Key Features
-
-### 📤 Document Upload & Processing
-- Supports PDF, DOCX, TXT formats
-- Automated text extraction and preprocessing
-- Batch upload support
-
-### 🔍 Semantic Search Engine
-- Context-aware query understanding
-- Multi-document knowledge retrieval
-- Vector-based document indexing
-
-### 💬 Conversational AI Interface
-- Multi-turn dialogue support
-- Memory-based contextual responses
-- Natural language interaction
-
-### 🌍 Multilingual Accessibility
-- Hindi and English support
-- Regional language expansion ready
-- Voice integration ready architecture
-
-### 📎 Source-Verified Responses
-- Chunk-level citation references
-- Transparent and trustworthy answers
-- Reduces AI hallucinations
-
-### 🔐 Security & Privacy First
-- Local vector database storage
-- IAM restricted AWS Bedrock access
-- Cost-controlled AI model invocation
+Every response is traceable to official source documents.
 
 ---
 
 ## 🏗️ System Architecture Overview
 
-PubliQ follows a scalable Retrieval-Augmented Generation architecture:
+PubliQ follows a scalable RAG architecture:
 
-1. Users upload government documents
-2. Backend extracts and chunks document text
-3. Text converted into semantic embeddings
-4. Stored inside ChromaDB vector store
-5. User queries retrieve relevant document chunks
-6. AWS Bedrock generates grounded AI responses
-7. Answers returned with source citations
+1. Document Upload & Parsing  
+2. Text Chunking & Embedding Generation  
+3. Storage in ChromaDB Vector Store  
+4. Semantic Retrieval  
+5. AWS Bedrock LLM for grounded answer generation  
+6. Source-cited response delivery  
+
+📄 Full technical details available in:
+
+- `docs/design.md`
+- `docs/requirements.md`
+
+---
+
+## 🎯 Target Users
+
+- Rural Citizens  
+- NGOs & Community Workers  
+- Local Government Officials  
+- Social Welfare Volunteers  
+- Researchers & Journalists  
+
+---
+
+## ⭐ Key Features
+
+### 🔍 Semantic Search
+Context-aware retrieval across multiple government documents.
+
+### 💬 Conversational AI
+Natural language queries in Hindi and English.
+
+### 📎 Source-Cited Responses
+Every answer includes document references and traceable citations.
+
+### 🌍 Multilingual Ready
+Designed for Hindi and English, expandable to regional languages.
+
+### 🔐 Security & Cost Efficiency
+- IAM-restricted Bedrock access  
+- Only retrieved chunks sent to LLM  
+- Designed for low-bandwidth environments  
 
 ---
 
 ## ☁️ AWS Services Used
 
-- AWS Bedrock (Claude / Titan Models)
-- AWS IAM (Security & Access Control)
-- AWS CloudWatch (Monitoring)
-- AWS Serverless Ready Backend Architecture
+- AWS Bedrock (LLM inference)
+- AWS IAM (Access Control)
+- AWS S3 (Document Storage)
+- AWS CloudWatch (Monitoring & Audit)
 
 ---
 
@@ -116,29 +121,21 @@ PubliQ follows a scalable Retrieval-Augmented Generation architecture:
 ### Database
 - ChromaDB (Vector Database)
 
-### Frontend
-- HTML
-- CSS
-- JavaScript
-- Streamlit / Web UI (Prototype)
+### Frontend (Planned)
+- Web Interface (Lightweight UI)
+- Mobile-ready architecture
 
 ---
 
-## 📂 Project Structure
+## 📂 Repository Structure
 
-```
-PubliQ/
-│
-├── docs/
+```text
+PubliQ
+├── README.md
+└── docs
     ├── requirements.md
     └── design.md
 ```
 
----
 
-## ⚙️ Installation & Setup
 
-### Step 1: Clone Repository
-```bash
-git clone https://github.com/asteroiddestroyer911/PubliQ.git
-cd publiq
